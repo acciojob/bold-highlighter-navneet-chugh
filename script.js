@@ -1,22 +1,19 @@
 const paragraph = document.getElementById('paragraph');
-const highlightLink = document.getElementById('highlightLink');
+
 function highlight() {
-    //Write your code here
-const boldWords = paragraph.querySelectorAll('strong');
+    const boldWords = paragraph.querySelectorAll('strong');
     for (const word of boldWords) {
         word.style.color = 'green';
     }
-
 }
 
-
 function return_normal() {
-    //Write your code here
-const boldWords = paragraph.querySelectorAll('strong');
+    const boldWords = paragraph.querySelectorAll('strong');
     for (const word of boldWords) {
         word.style.color = 'black';
     }
-    
 }
+
+const highlightLink = document.querySelector('a'); // Change this selector according to your link's id or class
 highlightLink.addEventListener('mouseover', highlight);
 highlightLink.addEventListener('mouseout', return_normal);
